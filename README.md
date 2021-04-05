@@ -33,7 +33,7 @@ popd
 ```
 
 ```
-gcloud auth activate-service-account --key-file=~/Downloads/practice-da34f-firebase-adminsdk-ueykj-053ff9bed4.json
+gcloud auth activate-service-account --key-file="$HOME/Downloads/practice-da34f-firebase-adminsdk-ueykj-053ff9bed4.json"
 gcloud --quiet config set project practice-da34f
 gcloud firebase test android run --type instrumentation \
   --app build/app/outputs/apk/debug/app-debug.apk \
