@@ -29,6 +29,17 @@ void main() {
     // waitを入れるとtest labで動画に写りやすくなる
     await Future.delayed(Duration(milliseconds: 500));
 
+    // Finds the floating action button to tap on.
+    final Finder fab = find.byTooltip('Increment');
+
+    // Emulate a tap on the floating action button.
+    await tester.tap(fab);
+    await tester.tap(fab);
+    await tester.tap(fab);
+    await tester.tap(fab);
+
+    await tester.pumpAndSettle();
+
     // TODO: https://github.com/flutter/flutter/issues/51890
     // Add screenshot capability for mobile platforms.
 
