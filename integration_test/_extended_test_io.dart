@@ -26,6 +26,9 @@ void main() {
     // Trigger a frame.
     await tester.pumpAndSettle();
 
+    // waitを入れるとtest labで動画に写りやすくなる
+    await Future.delayed(Duration(milliseconds: 500));
+
     // TODO: https://github.com/flutter/flutter/issues/51890
     // Add screenshot capability for mobile platforms.
 
